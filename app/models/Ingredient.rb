@@ -11,4 +11,13 @@ class Ingredient
   def self.all
     @@all
   end
+
+  def allergen?
+    if Allergen.all.find {|allergen| allergen.ingredient == self}
+      true
+    else
+      false
+    end
+  end
+
 end

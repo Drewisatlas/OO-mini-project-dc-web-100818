@@ -11,17 +11,17 @@ We've provided you with a console that you can use to test your code. To enter a
 ### `Recipe`
 Build the following methods on the Recipe class
 
- DONE- `Recipe.all`
+DONE- `Recipe.all`
 should return all of the recipe instances
-- `Recipe.most_popular`
+DONE - `Recipe.most_popular`
 should return the recipe instance with the highest number of users (the recipe that has the most recipe cards)
-- `Recipe#users`
+DONE- `Recipe#users`
 should return the user instances who have recipe cards with this recipe
-- `Recipe#ingredients`
+DONE- `Recipe#ingredients`
 should return all of the ingredients in this recipe
-- `Recipe#allergens`
+DONE- `Recipe#allergens`
 should return all of the ingredients in this recipe that are allergens
-- `Recipe#add_ingredients`
+DONE- `Recipe#add_ingredients`
 should take an array of ingredient instances as an argument, and associate each of those ingredients with this recipe
 
 
@@ -30,7 +30,7 @@ Build the following methods on the User class
 
 DONE - `User.all`
 should return all of the user instances
-- `User#recipes`
+DONE- `User#recipes`
 should return all of the recipes this user has recipe cards for
 DONE - `User#add_recipe_card`
 should accept a recipe instance as an argument, as well as a date and rating, and create a new recipe card for this user and the given recipe
@@ -38,9 +38,9 @@ DONE - `User#declare_allergen`
 should accept an ingredient instance as an argument, and create a new allergen instance for this user and the given ingredient
 DONE - `User#allergens`
 should return all of the ingredients this user is allergic to
-- `User#top_three_recipes`
+DONE- `User#top_three_recipes`
 should return the top three highest rated recipes for this user.
-- `User#most_recent_recipe`
+DONE- `User#most_recent_recipe`
 should return the recipe most recently added to the user's cookbook.
 
 
@@ -49,21 +49,21 @@ should return the recipe most recently added to the user's cookbook.
 A RecipeCard is the join between a user instance and a recipe instance.  This is a has-many-through relationship.
 Build the following methods on the RecipeCard class:  
 
-- `RecipeCard.all`
+DONE- `RecipeCard.all`
 should return all of the RecipeCard instances
-- `RecipeCard#date`
+DONE- `RecipeCard#date`
 should return the date of the entry
-- `RecipeCard#rating`
+DONE- `RecipeCard#rating`
 should return the rating (an integer) a user has given their entry
-- `RecipeCard#user`
+DONE- `RecipeCard#user`
 should return the user to which the entry belongs
-- `RecipeCard#recipe`
+DONE- `RecipeCard#recipe`
 should return the recipe to which the entry belongs
 
 ### `Ingredient`
 Build the following methods on the Ingredient class
 
-- `Ingredient.all`
+DONE- `Ingredient.all`
 should return all of the ingredient instances
 - `Ingredient.most_common_allergen`
 should return the ingredient instance that the highest number of users are allergic to
@@ -73,11 +73,11 @@ should return the ingredient instance that the highest number of users are aller
 RecipeIngredient is the join between an ingredient and a recipe.  This is a has-many-through relationship
 Build the following methods on the RecipeIngredient class
 
-- `RecipeIngredient.all`
+DONE- `RecipeIngredient.all`
 should return all of the RecipeIngredient instances
-- `RecipeIngredient#ingredient`
+DONE- `RecipeIngredient#ingredient`
 should return the ingredient instance
-- `RecipeIngredient#recipe`
+DONE- `RecipeIngredient#recipe`
 should return the recipe instance
 
 ### `Allergen`

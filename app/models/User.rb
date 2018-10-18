@@ -24,4 +24,23 @@ class User
     Allergen.all.select {|allergen| allergen.user == self}
   end
 
+  def recipes
+    RecipeCard.all.select {|recipe_card| recipe_card.user == self}
+  end
+
+  def recipe_ratings
+    self.recipes.map {|recipe| recipe.rating}
+  end
+
+  def top_three_recipes #should return the top three highest rated recipes for this user.
+     self.recipes.sort {|a, b| b.rating <=> a.rating}[0, 3]
+  end
+
+  def most_recent_recipe
+    self.recipes.sort {|a, b| b.date <=> a.date}[0]
+  end
+
+  #Identify all the recipes for the user
+  #sort in a array
+  # select top 3
 end
